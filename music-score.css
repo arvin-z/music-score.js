@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.line {
+    background-image: url("img/staff.png");
+    background-size: auto 100%;
+
+    float: left;
+    height: 125px;
+    width: 390px;
+}
+
+.divider {
+    background-color: transparent;
+    background-image: url("img/divider.png");
+    background-repeat: no-repeat;
+    background-size: auto 49%;
+    background-position: right center;
+    height: 135px;
+    margin-top: -6px;
+
+  }
+
+.divider.last {
+
+    background-image: url("img/end-divider.png");
+
+}
+
+.annotation {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 100px;
+    color: black;
+}
+
+.quarternote {
+    background-size: auto 49%;
+    float: left;
+    height: 150px;
+    width: 30px;
+    margin: 0 5%;
+    background-repeat: no-repeat;
+    background-image: url("img/quarternote.png");
+}
+
+.quarternote.flipped {
+    background-image: url("img/quarternote-flipped.png");
+}
+
+.quarterrest {
+    background-size: auto 49%;
+    float: left;
+    height: 100px;
+    width: 30px;
+    margin: 0 5%;
+    background-repeat: no-repeat;
+    background-image: url("img/quarterrest.png");
+}
+
+.halfnote {
+    background-size: auto 49%;
+    float: left;
+    height: 150px;
+    width: 30px;
+    margin: 0 15%;
+    background-repeat: no-repeat;
+    background-image: url("img/halfnote.png");
+}
+
+.halfrest {
+    background-size: auto 49%;
+    float: left;
+    height: 150px;
+    width: 30px;
+    margin: 0 15%;
+    background-repeat: no-repeat;
+    background-image: url("img/halfrest.png");
+}
+
+.eighthnote {
+    background-size: auto 49%;
+    float: left;
+    height: 150px;
+    width: 34px;
+    margin: 0 1.6%;
+    background-repeat: no-repeat;
+    background-image: url("img/eighthnote.png");
+}
+
+.eighthnote.flipped {
+    background-image: url("img/eighthnote-flipped.png");
+}
+
+.eighthrest {
+    background-size: auto 49%;
+    float: left;
+    height: 80px;
+    width: 30px;
+    margin: 0 1.6%;
+    background-repeat: no-repeat;
+    background-image: url("img/eighthrest.png");
+}
+
+.halfnote.flipped {
+    background-image: url("img/halfnote-flipped.png");
+}
+
+.wholenote {
+    background-size: auto 50%;
+    float: left;
+    height: 150px;
+    width: 30px;
+    margin: 0 25%;
+    background-repeat: no-repeat;
+    background-image: url("img/wholenote.png");
+}
+
+.wholerest {
+    background-size: auto 49%;
+    float: left;
+    height: 150px;
+    width: 30px;
+    margin: 0 32%;
+    background-repeat: no-repeat;
+    background-image: url("img/wholerest.png");
+}
+
+.timesignature {
+    font-family: 'Abril Fatface', cursive;
+    width: 1px; 
+    word-wrap: break-word;
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: 35px;
+    float: left;
+    font-size: 36px;
+    line-height:30px;
+    color:black;
+}
+
+.B3 {
+    margin-top: 64px;
+}
+
+.C4 {
+    margin-top: 56px;
+}
+
+.D4 {
+    margin-top: 47px;
+}
+
+.E4 {
+    margin-top: 40px;
+}
+
+.F4 {
+    margin-top: 30px;
+}
+
+.G4 {
+    margin-top: 25px;
+}
+
+.A4 {
+    margin-top: 15px;
+}
+
+.B4 {
+    margin-top: 45px;
+}
+
+.C5 {
+    margin-top: 40px;
+}
+
+.D5 {
+    margin-top: 30px;
+}
+
+.E5 {
+    margin-top: 23px;
+}
+
+.F5 {
+    margin-top: 15px;
+}
+
+.G5 {
+    margin-top: 8px;
+}
+
+.A5 {
+    margin-top: 0px;
+}
+
+.B5 {
+    margin-top: -10px;
+}
+
+.C6 {
+    margin-top: -20px;
+}
+
+.extendmid {
+    background-image: url("img/extend_line.png");
+    background-size: auto 100%;
+    margin-left: -2px;
+    height: 20px;
+    width: 28px;
+    margin-top: 44px;
+}
+
+.extendbot {
+    background-image: url("img/extend_line.png");
+    background-size: auto 100%;
+    margin-left: -2px;
+    height: 20px;
+    width: 28px;
+    margin-top: 36px;
+}
+
+.extend1 {
+    background-image: url("img/extend_line.png");
+    background-size: auto 100%;
+    margin-left: -2px;
+    height: 20px;
+    width: 28px;
+    margin-top: -5px;
+}
+
+.flipped .extendmid {
+    background-image: url("img/extend_line.png");
+    background-size: auto 100%;
+    margin-left: -2px;
+    height: 20px;
+    width: 28px;
+    margin-top: 5px;
+}
+
+.flipped .extendbot {
+    background-image: url("img/extend_line.png");
+    background-size: auto 100%;
+    margin-left: -2px;
+    height: 20px;
+    width: 28px;
+    margin-top: 15px;
+}
+
+.flipped .extend1 {
+    background-image: url("img/extend_line.png");
+    background-size: auto 100%;
+    margin-left: -2px;
+    height: 20px;
+    width: 28px;
+    margin-top: -5px;
+}
+
+
+
+
