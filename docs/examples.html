@@ -1,0 +1,135 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            music-score.js - Examples
+        </title>
+        <link rel="stylesheet" href="music-score.css">
+        <script defer type="text/javascript" src="music-score.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <script defer type="text/javascript" src="examples.js"></script>
+    </head>
+
+    <body>
+        <h1>music-score.js - Examples</h1>
+        
+
+        
+
+        <h2>Creating a line of music:</h2>
+        
+        <div id='demo'></div>
+        <br><br>
+        <p class="desc">HTML:</p>
+        <div class='codeblock'>
+            <pre>
+                <code>
+    &lt;div id='sample'&gt;&lt;/div&gt; // create an empty div with a unique id</code>
+            </pre>
+        </div>
+        <p class="desc">JS:</p>
+        <div class='codeblock'>
+            <pre>
+                <code>
+    const demoSong = new MusicScore('sample'); // create a new MusicScore object linked to the id of the div
+    demoSong.setBars(2); // set how many bars long this piece of music will be
+    demoSong.setTimeSignature(5, 4); // set the time signature of this piece of music
+    demoSong.addNote(0, 'D4', 'quarter'); // add notes
+    demoSong.addNote(0, 'E4', 'quarter');
+    demoSong.addNote(0, 'F4', 'quarter');
+    demoSong.addNote(0, 'G4', 'quarter');
+    demoSong.addNote(0, 'A4', 'quarter');
+    demoSong.addNote(1, 'B4', 'quarter');
+    demoSong.addNote(1, 'C5', 'quarter');
+    demoSong.addNote(1, 'D5', 'quarter');
+    demoSong.addNote(1, 'E5', 'quarter');
+    demoSong.addNote(1, 'F5', 'quarter');
+    demoSong.annotate(0, 'mp');  // add an annotation for dynamic
+    demoSong.annotate(1, 'f');</code>
+            </pre>
+        </div>
+
+        <h2>Note player & Changing tempo:</h2>
+        <div id='demo2'></div>
+        <br><br>
+        <p>The Note Player highlights the notes in rhythm, allowing the user to play along on their instrument</p>
+        <button class="myButton" onclick="playListener()">Click Here to Start the Note Player</button>
+        <p>The user can manually adjust the tempo of the Note Player, in case its too fast or slow for them:</p>
+        <p>Current tempo: <span id='demo2Tempo'>90</span> (Beats per minute)</p>
+        <button class="myButton" onclick="tempoDownListener()">-</button> 
+        <button class="myButton" onclick="tempoResetListener()">Reset</button> 
+        <button class="myButton" onclick="tempoUpListener()">+</button>
+        <p class="desc">HTML:</p>
+        <div class='codeblock'>
+            <pre>
+                <code>
+    &lt;button onclick=&quot;playListener()&quot;&gt;Click Here to Start the Note Player&lt;/button&gt;
+    &lt;p&gt;Current tempo: &lt;span id='demo2Tempo'&gt;90&lt;/span&gt; (Beats per minute)&lt;/p&gt;
+    &lt;button onclick=&quot;tempoDownListener()&quot;&gt;-&lt;/button&gt; 
+    &lt;button onclick=&quot;tempoResetListener()&quot;&gt;Reset&lt;/button&gt; 
+    &lt;button onclick=&quot;tempoUpListener()&quot;&gt;+&lt;/button&gt;</code>
+            </pre>
+        </div>
+        <p class="desc">JS:</p>
+        <div class='codeblock'>
+            <pre>
+                <code>
+    function playListener() {
+        playerSong.play();
+    }
+    function tempoUpListener() {
+        playerSong.tempoUp();
+        document.getElementById('demo2Tempo').innerText = playerSong.getTempo();
+    }
+    function tempoDownListener() {
+        playerSong.tempoDown();
+        document.getElementById('demo2Tempo').innerText = playerSong.getTempo();
+    }
+    function tempoResetListener() {
+        playerSong.tempoReset();
+        document.getElementById('demo2Tempo').innerText = playerSong.getTempo();
+    }</code>
+            </pre>
+        </div>
+        
+        <h2>Transposing:</h2>
+        <div id='demo3'></div>
+        <br><br>
+        <p>The Transposer allows the user to change the key of the music by moving the notes up or down</p>
+        <button class="myButton" onclick="transposeDown()">-</button>
+        <button class="myButton" onclick="resetListener()">Reset</button>
+        <button class="myButton" onclick="transposeUp()">+</button>
+        <p class="desc">HTML:</p>
+        <div class='codeblock'>
+            <pre>
+                <code>
+    &lt;button class=&quot;myButton&quot; onclick=&quot;transposeDown()&quot;&gt;-&lt;/button&gt;
+    &lt;button class=&quot;myButton&quot; onclick=&quot;resetListener()&quot;&gt;Reset&lt;/button&gt;
+    &lt;button class=&quot;myButton&quot; onclick=&quot;transposeUp()&quot;&gt;+&lt;/button&gt;</code>
+            </pre>
+        </div>
+        <p class="desc">JS:</p>
+        <div class='codeblock'>
+            <pre>
+                <code>
+    function transposeUp() {
+        transposerSong.transpose('up');
+    }
+    
+    function transposeDown() {
+        transposerSong.transpose('down');
+    }
+    
+    function resetListener() {
+        transposerSong.resetNotes();
+    }</code>
+            </pre>
+        </div>
+        
+
+        
+
+
+    </body>
+    
+</html>

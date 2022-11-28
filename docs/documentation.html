@@ -1,0 +1,86 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            music-score.js - Documentation
+        </title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <h1>music-score.js - Documentation</h1>
+        <h2>Getting started:</h2>
+        <p>Load music-score.css and music-score.js on your HTML page:</p>
+        <div class='codeblock'>
+            <pre>
+                <code>
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;music-score.css&quot;&gt;
+    &lt;script defer type=&quot;text/javascript&quot; src=&quot;music-score.js&quot;&gt;&lt;/script&gt;</code>
+            </pre>
+        </div>
+        <p>Create an empty div with a unique id:</p>
+        <div class='codeblock'>
+            <pre>
+                <code>
+    &lt;div id='sample'&gt;&lt;/div&gt;</code>
+            </pre>
+        </div>
+        <p>In your script, initialize a MusicScore instance with the div id as argument:</p>
+        <div class='codeblock'>
+            <pre>
+                <code>
+    const demoSong = new MusicScore('sample');</code>
+            </pre>
+        </div>
+
+        <h2>API:</h2>
+
+        <h3>.setBars(num_bars)</h3>
+        <p>Add <code>num_bars</code> bars to a MusicScore.</p>
+
+        <h3>.setTimeSignature(top, bottom)</h3>
+        <p>Set the time signature of a MusicScore to <code>top</code>/<code>bottom</code></p>
+
+
+        <h3>.annotate(bar_num, text)</h3>
+        <p>Add <code>text</code> as an annotation to the <code>bar_num</code>th bar of a MusicScore.</p>
+
+        <h3>.addNote(bar_num, note, type)</h3>
+        <p>Add a note to the <code>bar_num</code>th bar of a MusicScore. The parameters are described below:</p>
+        
+        <h4><code>note</code></h4>
+        <p>The current range of notes supported are <code>'B3'</code> through <code>'C6'</code>.</p>
+        <p>If <code>note</code> is set to <code>'rest'</code>, a rest will be created.</p>
+        
+        <h4><code>type</code></h4>
+        <p>The current types of notes supported are <code>'eighth'</code>, <code>'quarter'</code>, <code>'half'</code>, and 
+        <code>'whole'</code>.</p>
+
+        <h3>.transpose(direction)</h3>
+        <p>Move the notes in a MusicScore. Valid values for <code>direction</code> are <code>'up'</code> and <code>'down'</code></p>
+
+        <h3>.resetNotes()</h3>
+        <p>Sets the notes in a MusicScore back to their default location, undoing any transposition.</p>
+
+        <h3>.setTempo(n)</h3>
+        <p>Set the tempo of a MusicScore to <code>n</code> Beats Per Minute.</p>
+
+        <h3>.tempoUp()</h3>
+        <p>Increments the tempo of a MusicScore.</p>
+
+        <h3>.tempoDown()</h3>
+        <p>Decrements the tempo of a MusicScore.</p>
+
+        <h3>.tempoReset()</h3>
+        <p>Sets the tempo of a MusicScore back to the default value.</p>
+
+        <h3>.getTempo()</h3>
+        <p>Returns the tempo of a MusicScore.</p>
+
+        <h3>.play()</h3>
+        <p>Begins the Note Player for a MusicScore.</p>
+        
+
+    </body>
+    
+</html>
