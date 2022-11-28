@@ -4,6 +4,8 @@ Example usage: https://arvin-z.github.io/music-score.js/examples.html
 
 ### Getting started:
 
+Note: By default, `img` folder must be in the same directory as music-score.css
+
 Load music-score.css and music-score.js on your HTML page:
 
 ```html
