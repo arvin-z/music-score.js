@@ -1,6 +1,6 @@
 ## music-score.js
 
-Example usage: https://floating-taiga-70717.herokuapp.com/examples.html
+Example usage: https://arvin-z.github.io/music-score.js/examples.html
 
 ### Getting started:
 
@@ -23,4 +23,4 @@ In your script, initialize a MusicScore instance with the div id as argument:
 const demoSong = new MusicScore('sample');
 ```
 
-Documentation: https://floating-taiga-70717.herokuapp.com/documentation.html
+Documentation: https://arvin-z.github.io/music-score.js/documentation.html
